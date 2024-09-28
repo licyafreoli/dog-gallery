@@ -1,0 +1,119 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top right, #001f3f, #004080, #006bbf);
+    background-size: 300% 300%;
+    animation: backgroundGradient 12s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  @keyframes backgroundGradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    animation: textGlow 3s ease-in-out infinite alternate;
+  }
+  
+  @keyframes textGlow {
+    0% {
+      text-shadow: 0px 0px 12px rgba(0, 229, 255, 0.7), 0px 0px 24px rgba(0, 229, 255, 0.5), 0px 0px 36px rgba(0, 229, 255, 0.3);
+    }
+    100% {
+      text-shadow: 0px 0px 24px rgba(29, 233, 182, 0.9), 0px 0px 48px rgba(29, 233, 182, 0.7), 0px 0px 72px rgba(29, 233, 182, 0.6);
+    }
+  }
+  
+  #breed-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+    max-width: 100%;
+  }
+  
+  button {
+    background: linear-gradient(135deg, #1e90ff, #00d4ff);
+    color: #ffffff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 150, 255, 0.4);
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #0277bd, #01579b);
+    box-shadow: 0 12px 28px rgba(0, 150, 255, 0.7);
+    transform: translateY(-4px);
+  }
+  
+  button:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 12px rgba(0, 150, 255, 0.7);
+  }
+  
+  #breed-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  
+  img.dog-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  img.dog-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 229, 255, 0.8);
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  
+    img.dog-image {
+      height: 150px;
+    }
+  }
+  
