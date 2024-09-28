@@ -1,4 +1,4 @@
-# Dog Breed Gallery
+# Dog Breed Gallery🐾
 
 An interactive web application for dog lovers, where users can view images of different dog breeds. The application allows users to click on breed buttons and see random images of those breeds.
 
