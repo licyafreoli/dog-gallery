@@ -64,8 +64,6 @@
     transition: all 0.4s ease;
     box-shadow: 0 10px 20px rgba(0, 150, 255, 0.4);
     text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
   }
   
   button:hover {
@@ -102,6 +100,7 @@
     box-shadow: 0 20px 40px rgba(0, 229, 255, 0.8);
   }
   
+  /* Media Queries para Responsividade */
   @media (max-width: 768px) {
     h1 {
       font-size: 2.5rem;
@@ -109,7 +108,7 @@
   
     button {
       font-size: 1rem;
-      padding: 10px 20px;
+      padding: 10px 15px;
     }
   
     img.dog-image {
@@ -117,3 +116,16 @@
     }
   }
   
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    button {
+      width: 100%;
+    }
+  
+    img.dog-image {
+      height: 120px;
+    }
+  }
